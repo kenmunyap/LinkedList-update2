@@ -34,6 +34,7 @@ char* GlobalOrderError;
 //=======External Functions This Runner Calls=====
 extern void setUp(void);
 extern void tearDown(void);
+extern void test_create_linkedList_should_return_initialized_linkedList_object(void);
 
 
 //=======Test Reset Option=====
@@ -49,6 +50,7 @@ int main(void)
 {
   Unity.TestFile = "test_linkedList.c";
   UnityBegin();
+  RUN_TEST(test_create_linkedList_should_return_initialized_linkedList_object, 8);
 
   return (UnityEnd());
 }

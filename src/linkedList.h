@@ -3,15 +3,20 @@
 
 typedef struct Element_t Element;
 
+//Struct of linkedList
 typedef struct{
 	Element *head;
 	Element *tail;
 	int length;
-}LinkedList;
+}linkedList;
 
+//Struct of Element;
 typedef struct Element_t{
 	struct Element_t *next;
 	int data;
 }Element;
+
+//Function prototype
+linkedList *create_linkedList();
 
 #endif //__LINKED_LIST_H__
