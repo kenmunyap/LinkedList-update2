@@ -35,16 +35,29 @@ void test_listAdd_should_add_one_element(){
 
 	linkedList *list;
 	list = create_linkedList();
-	list->length = 1;
 	
-	Element elemArray[] = {{.next = NULL,.data = 1}};
+	Element elemArray[]={							
+							{.next=(Element *)0xbeefface, .data=1}
+						};
+
 	list_Add(list,elemArray);
 	
 	TEST_ASSERT_NULL(elemArray[0].next);
+	TEST_ASSERT_EQUAL(list->head,list->tail);
+	TEST_ASSERT_EQUAL(&elemArray[0],list->head);
+	TEST_ASSERT_EQUAL(&elemArray[0],list->tail);
 	TEST_ASSERT_EQUAL(1,list->head->data);
 	TEST_ASSERT_EQUAL(1,list->tail->data);
+	TEST_ASSERT_EQUAL(0,list->tail->next);
+	TEST_ASSERT_EQUAL(1,list->length);
+	
+	
+	
 	
 }
+
+
+
 
 
 	

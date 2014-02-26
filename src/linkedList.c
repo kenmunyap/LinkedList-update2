@@ -21,9 +21,15 @@ void list_testAdd(linkedList *list,Element *element){
 
 void list_Add(linkedList *list,Element *element){
 		
-		list->head = &element[0];
-		list->tail = &element[0];
-		element[0].next = NULL;
+		element[list->length].next = NULL;
+		
+		if(list->head == NULL && list-> tail == NULL){
+			list->head = &element[0];
+			list->tail = &element[0];
+			list->length++;
+		}
+		
+		
 	
 }
 
