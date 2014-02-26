@@ -9,11 +9,14 @@
 - :test: test_listAdd_if_able_to_pass_in_array
   :line: 20
   :message: ''
+- :test: test_listAdd_should_add_one_element
+  :line: 34
+  :message: ''
 :failures: []
 :ignores: []
 :counts:
-  :total: 2
-  :passed: 2
+  :total: 3
+  :passed: 3
   :failed: 0
   :ignored: 0
 :stdout:

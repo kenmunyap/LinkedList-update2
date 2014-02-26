@@ -23,10 +23,28 @@ void test_listAdd_if_able_to_pass_in_array(){
 	list = create_linkedList();
 	
 	Element elem[] = {{.next = NULL,.data = 1},{.next = NULL,.data = 2}};
-	list_Add(list,elem);
+	list_testAdd(list,elem);
 	
 	TEST_ASSERT_NOT_NULL(list);
 	TEST_ASSERT_EQUAL(1, elem[0].data);
 	TEST_ASSERT_EQUAL(2, elem[1].data);
 	
 }
+
+void test_listAdd_should_add_one_element(){
+
+	linkedList *list;
+	list = create_linkedList();
+	list->length = 1;
+	
+	Element elemArray[] = {{.next = NULL,.data = 1}};
+	list_Add(list,elemArray);
+	
+	TEST_ASSERT_NULL(elemArray[0].next);
+	TEST_ASSERT_EQUAL(1,list->head->data);
+	TEST_ASSERT_EQUAL(1,list->tail->data);
+	
+}
+
+
+	
