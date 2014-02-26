@@ -12,24 +12,21 @@ linkedList *create_linkedList(){
 		
 		return list;
 }
-void list_testAdd(linkedList *list,Element *element){
-	
-	printf("First element data is: %d\n",element[0].data);
-	printf("Second element data is: %d\n",element[1].data);
-	
-}
 
-void list_Add(linkedList *list,Element *element){
+
+void List_addLast(linkedList *list,Element *element){
 		
 		element[list->length].next = NULL;
 		
 		if(list->head == NULL && list-> tail == NULL){
 			list->head = &element[0];
 			list->tail = &element[0];
-			list->length++;
 		}
-		
-		
+		else{
+			list->head = &element[0];
+			list->tail = &element[(list->length)];
+		}
+		list->length++;
 	
 }
 

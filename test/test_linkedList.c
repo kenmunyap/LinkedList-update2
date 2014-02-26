@@ -17,42 +17,56 @@ void test_create_linkedList_should_return_initialized_linkedList_object(){
 	
 }
 
-void test_listAdd_if_able_to_pass_in_array(){
+
+void test_List_addLast_should_add_last_one_element(){
 
 	linkedList *list;
+	
+	//initialize the list
 	list = create_linkedList();
 	
-	Element elem[] = {{.next = NULL,.data = 1},{.next = NULL,.data = 2}};
-	list_testAdd(list,elem);
-	
-	TEST_ASSERT_NOT_NULL(list);
-	TEST_ASSERT_EQUAL(1, elem[0].data);
-	TEST_ASSERT_EQUAL(2, elem[1].data);
-	
-}
-
-void test_listAdd_should_add_one_element(){
-
-	linkedList *list;
-	list = create_linkedList();
-	
+	//Test fixture
 	Element elemArray[]={							
-							{.next=(Element *)0xbeefface, .data=1}
+							{.next=(Element *)0xabc, .data=1}
 						};
 
-	list_Add(list,elemArray);
+	List_addLast(list,elemArray);
 	
 	TEST_ASSERT_NULL(elemArray[0].next);
-	TEST_ASSERT_EQUAL(list->head,list->tail);
-	TEST_ASSERT_EQUAL(&elemArray[0],list->head);
-	TEST_ASSERT_EQUAL(&elemArray[0],list->tail);
-	TEST_ASSERT_EQUAL(1,list->head->data);
-	TEST_ASSERT_EQUAL(1,list->tail->data);
-	TEST_ASSERT_EQUAL(0,list->tail->next);
+	TEST_ASSERT_EQUAL_PTR(&elemArray[0],list->head);
+	TEST_ASSERT_EQUAL_PTR(&elemArray[0],list->tail);
+	TEST_ASSERT_EQUAL(1,elemArray[0].data);
 	TEST_ASSERT_EQUAL(1,list->length);
 	
 	
 	
+}
+
+void test_List_addLast_should_add_last_second_element(){
+
+	linkedList *list;
+	
+	//initialize the list
+	list = create_linkedList();
+	
+	//Test fixture
+	Element elemArray[]={	
+							{.next=&elemArray[1], .data=1},	
+							{.next=(Element *)0xbeefface, .data=2}
+						};
+						
+	list->head = &elemArray[0];
+	list->tail = &elemArray[0];
+	list->length = 1;
+	
+	List_addLast(list,elemArray);
+	
+	TEST_ASSERT_NULL(elemArray[1].next);
+	TEST_ASSERT_EQUAL_PTR(&elemArray[0],list->head);
+	TEST_ASSERT_EQUAL_PTR(&elemArray[1],list->tail);
+	TEST_ASSERT_EQUAL(1,elemArray[0].data);
+	TEST_ASSERT_EQUAL(2,elemArray[1].data);
+	TEST_ASSERT_EQUAL(2,list->length);
 	
 }
 

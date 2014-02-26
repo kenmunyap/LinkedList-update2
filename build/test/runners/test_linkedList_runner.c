@@ -35,8 +35,8 @@ char* GlobalOrderError;
 extern void setUp(void);
 extern void tearDown(void);
 extern void test_create_linkedList_should_return_initialized_linkedList_object(void);
-extern void test_listAdd_if_able_to_pass_in_array(void);
-extern void test_listAdd_should_add_one_element(void);
+extern void test_List_addLast_should_add_last_one_element(void);
+extern void test_List_addLast_should_add_last_second_element(void);
 
 
 //=======Test Reset Option=====
@@ -53,8 +53,8 @@ int main(void)
   Unity.TestFile = "test_linkedList.c";
   UnityBegin();
   RUN_TEST(test_create_linkedList_should_return_initialized_linkedList_object, 8);
-  RUN_TEST(test_listAdd_if_able_to_pass_in_array, 20);
-  RUN_TEST(test_listAdd_should_add_one_element, 34);
+  RUN_TEST(test_List_addLast_should_add_last_one_element, 21);
+  RUN_TEST(test_List_addLast_should_add_last_second_element, 42);
 
   return (UnityEnd());
 }
