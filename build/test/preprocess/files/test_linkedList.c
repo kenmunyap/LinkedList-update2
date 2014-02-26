@@ -26,4 +26,34 @@ void test_create_linkedList_should_return_initialized_linkedList_object(){
 
  UnityAssertEqualNumber((_U_SINT)((0)), (_U_SINT)((list->length)), (((void *)0)), (_U_UINT)16, UNITY_DISPLAY_STYLE_INT);
 
+
+
+}
+
+
+
+void test_listAdd_if_able_to_pass_in_array(){
+
+
+
+ linkedList *list;
+
+ list = create_linkedList();
+
+
+
+ Element elem[] = {{.next = ((void *)0),.data = 1},{.next = ((void *)0),.data = 2}};
+
+ list_Add(list,elem);
+
+
+
+ if ((((list)) != ((void *)0))) {} else {UnityFail( (" Expected Non-NULL"), (_U_UINT)(_U_UINT)(_U_UINT)28);;};
+
+ UnityAssertEqualNumber((_U_SINT)((1)), (_U_SINT)((elem[0].data)), (((void *)0)), (_U_UINT)29, UNITY_DISPLAY_STYLE_INT);
+
+ UnityAssertEqualNumber((_U_SINT)((2)), (_U_SINT)((elem[1].data)), (((void *)0)), (_U_UINT)30, UNITY_DISPLAY_STYLE_INT);
+
+
+
 }

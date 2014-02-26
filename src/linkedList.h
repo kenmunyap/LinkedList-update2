@@ -18,5 +18,5 @@ typedef struct Element_t{
 
 //Function prototype
 linkedList *create_linkedList();
-
+void list_Add(linkedList *list,Element *element);
 #endif //__LINKED_LIST_H__

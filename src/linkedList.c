@@ -12,4 +12,10 @@ linkedList *create_linkedList(){
 		
 		return list;
 }
+void list_Add(linkedList *list,Element *element){
+	
+	printf("First element data is: %d\n",element[0].data);
+	printf("Second element data is: %d\n",element[1].data);
+	
 
+}
