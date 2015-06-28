@@ -27,6 +27,20 @@ void List_addLast(linkedList *list,Element *element){
 		list->length++;
 }
 
+void List_addFirst(linkedList *list,Element *element){
+		
+		element[list->length].next = NULL;
+		
+		if(list->head == NULL && list-> tail == NULL){
+			list->head = &element[0];
+			list->tail = &element[0];
+		}else{
+			list->head = &element[(list->length)];
+			list->tail = &element[0];
+		}
+		list->length++;
+}
+
 Element *List_removeLast(linkedList *list){
     Element *element; 
     int length;
@@ -39,7 +53,6 @@ Element *List_removeLast(linkedList *list){
     }else{
       *(list->tail)--;
        list->length--;      
-
     }
     return element;
 }
