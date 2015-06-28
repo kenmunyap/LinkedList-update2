@@ -134,8 +134,8 @@ void test_List_removeLast_with_three_element(){
 	element = List_removeLast(list);
 	TEST_ASSERT_EQUAL_PTR(&elemArray[0],list->head);
 	TEST_ASSERT_EQUAL_PTR(&elemArray[1],list->tail);
+  TEST_ASSERT_EQUAL(3,elemArray[2].data);
 	TEST_ASSERT_EQUAL(1,list->length);
-
 }
 
 

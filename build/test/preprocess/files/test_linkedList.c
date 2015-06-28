@@ -264,8 +264,10 @@ void test_List_removeLast_with_three_element(){
 
  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArray[0])), (_U_SINT)(_UP)((list->head)), (((void *)0)), (_U_UINT)135, UNITY_DISPLAY_STYLE_HEX32);
 
- UnityAssertEqualNumber((_U_SINT)((elemArray[1])), (_U_SINT)((list->tail)), (((void *)0)), (_U_UINT)136, UNITY_DISPLAY_STYLE_INT);
+ UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArray[1])), (_U_SINT)(_UP)((list->tail)), (((void *)0)), (_U_UINT)136, UNITY_DISPLAY_STYLE_HEX32);
 
- UnityAssertEqualNumber((_U_SINT)((1)), (_U_SINT)((list->length)), (((void *)0)), (_U_UINT)137, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((3)), (_U_SINT)((elemArray[2].data)), (((void *)0)), (_U_UINT)137, UNITY_DISPLAY_STYLE_INT);
+
+ UnityAssertEqualNumber((_U_SINT)((1)), (_U_SINT)((list->length)), (((void *)0)), (_U_UINT)138, UNITY_DISPLAY_STYLE_INT);
 
 }

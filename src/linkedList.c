@@ -37,11 +37,9 @@ Element *List_removeLast(linkedList *list){
       list->tail = NULL;
       list->length--;
     }else{
- 
-      list->tail = NULL;
-      list->length--;
-      list->tail = &element[list->length];
-      printf("%d",list->tail);
+      *(list->tail)--;
+       list->length--;      
+
     }
     return element;
 }
