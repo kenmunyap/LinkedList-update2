@@ -12,31 +12,28 @@ linkedList *create_linkedList(){
 		return list;
 }
 
-
 void List_addLast(linkedList *list,Element *element){
-		
-		element[list->length].next = NULL;
-		
+	  
 		if(list->head == NULL && list-> tail == NULL){
-			list->head = &element[0];
-			list->tail = &element[0];
+      list->head = element;
+			list->tail = element;
 		}else{
-			list->head = &element[0];
-			list->tail = &element[(list->length)];
+      element->next = list->tail;
+      list->tail = element;
 		}
+    list->tail->next = NULL;
 		list->length++;
 }
 
 void List_addFirst(linkedList *list,Element *element){
 		
-		element[list->length].next = NULL;
 		
 		if(list->head == NULL && list-> tail == NULL){
-			list->head = &element[0];
-			list->tail = &element[0];
+			list->head = element;
+			list->tail = element;
 		}else{
-			list->head = &element[(list->length)];
-			list->tail = &element[0];
+      element->next = list->head;
+			list->head = element;
 		}
 		list->length++;
 }
@@ -52,7 +49,7 @@ Element *List_removeLast(linkedList *list){
       list->length--;
     }else{
       *(list->tail)--;
-       list->length--;      
+      list->length--;      
     }
     return element;
 }

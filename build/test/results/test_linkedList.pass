@@ -6,26 +6,14 @@
 - :test: test_create_linkedList_should_return_initialized_linkedList_object
   :line: 8
   :message: ''
-- :test: test_List_addLast_should_add_last_one_element
-  :line: 21
-  :message: ''
-- :test: test_List_addLast_should_add_last_second_element
-  :line: 45
-  :message: ''
-- :test: test_List_removeLast_no_element
-  :line: 72
-  :message: ''
-- :test: test_List_removeLast_one_element_and_return_NULL
-  :line: 94
-  :message: ''
-- :test: test_List_removeLast_with_three_element
-  :line: 116
+- :test: test_List_addLast_should_add_last_third_element
+  :line: 73
   :message: ''
 :failures: []
 :ignores: []
 :counts:
-  :total: 6
-  :passed: 6
+  :total: 2
+  :passed: 2
   :failed: 0
   :ignored: 0
 :stdout: []
