@@ -19,5 +19,6 @@ typedef struct Element_t{
 //Function prototype
 linkedList *create_linkedList();
 void List_addLast(linkedList *list,Element *element);
+Element *List_removeLast(linkedList *list);
 
 #endif //__LINKED_LIST_H__

@@ -1,7 +1,6 @@
-#include "linkedList.h"
 #include <stdio.h>
 #include <malloc.h>
-
+#include "linkedList.h"
 
 //Function to initialize the linkedList head,tail, and length
 linkedList *create_linkedList(){
@@ -21,13 +20,29 @@ void List_addLast(linkedList *list,Element *element){
 		if(list->head == NULL && list-> tail == NULL){
 			list->head = &element[0];
 			list->tail = &element[0];
-		}
-		else{
+		}else{
 			list->head = &element[0];
 			list->tail = &element[(list->length)];
 		}
 		list->length++;
-	
 }
 
+Element *List_removeLast(linkedList *list){
+    Element *element; 
+    int length;
+    if(list->head == NULL && list->tail == NULL){
+        return NULL;
+    }else if(list->head == list->tail){
+      list->head = NULL;
+      list->tail = NULL;
+      list->length--;
+    }else{
+ 
+      list->tail = NULL;
+      list->length--;
+      list->tail = &element[list->length];
+      printf("%d",list->tail);
+    }
+    return element;
+}
 	
