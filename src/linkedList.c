@@ -56,4 +56,20 @@ Element *List_removeLast(linkedList *list){
     }
     return element;
 }
+
+Element *List_removeFirst(linkedList *list){
+    Element *element; 
+    int length;
+    if(list->head == NULL && list->tail == NULL){
+        return NULL;
+    }else if(list->head == list->tail){
+      list->head = NULL;
+      list->tail = NULL;
+      list->length--;
+    }else{
+      list->head = list->head->next;
+      list->length--;
+    }
+    return element;
+}
 	
