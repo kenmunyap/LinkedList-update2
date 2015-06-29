@@ -100,68 +100,70 @@ void test_List_addLast_should_add_last_third_element(){
 
   UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArrayA)), (_U_SINT)(_UP)((list->head)), (((void *)0)), (_U_UINT)107, UNITY_DISPLAY_STYLE_HEX32);
 
-  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArray1)), (_U_SINT)(_UP)((list->tail)), (((void *)0)), (_U_UINT)108, UNITY_DISPLAY_STYLE_HEX32);
+  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArray0)), (_U_SINT)(_UP)((elemArrayA.next)), (((void *)0)), (_U_UINT)108, UNITY_DISPLAY_STYLE_HEX32);
 
-  UnityAssertEqualNumber((_U_SINT)((1)), (_U_SINT)((elemArray0.data)), (((void *)0)), (_U_UINT)109, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArray1)), (_U_SINT)(_UP)((list->tail)), (((void *)0)), (_U_UINT)109, UNITY_DISPLAY_STYLE_HEX32);
 
-  UnityAssertEqualNumber((_U_SINT)((2)), (_U_SINT)((elemArray1.data)), (((void *)0)), (_U_UINT)110, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((1)), (_U_SINT)((elemArray0.data)), (((void *)0)), (_U_UINT)110, UNITY_DISPLAY_STYLE_INT);
 
-  UnityAssertEqualNumber((_U_SINT)((4)), (_U_SINT)((elemArrayA.data)), (((void *)0)), (_U_UINT)111, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((2)), (_U_SINT)((elemArray1.data)), (((void *)0)), (_U_UINT)111, UNITY_DISPLAY_STYLE_INT);
 
-  UnityAssertEqualNumber((_U_SINT)((3)), (_U_SINT)((list->length)), (((void *)0)), (_U_UINT)112, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((4)), (_U_SINT)((elemArrayA.data)), (((void *)0)), (_U_UINT)112, UNITY_DISPLAY_STYLE_INT);
+
+  UnityAssertEqualNumber((_U_SINT)((3)), (_U_SINT)((list->length)), (((void *)0)), (_U_UINT)113, UNITY_DISPLAY_STYLE_INT);
 
 
 
   List_addFirst(list,&elemArrayB);
 
-  if ((((elemArray1.next)) == ((void *)0))) {} else {UnityFail( (" Expected NULL"), (_U_UINT)(_U_UINT)(_U_UINT)115);;};
+  if ((((elemArray1.next)) == ((void *)0))) {} else {UnityFail( (" Expected NULL"), (_U_UINT)(_U_UINT)(_U_UINT)116);;};
 
-  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArrayB)), (_U_SINT)(_UP)((list->head)), (((void *)0)), (_U_UINT)116, UNITY_DISPLAY_STYLE_HEX32);
+  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArrayB)), (_U_SINT)(_UP)((list->head)), (((void *)0)), (_U_UINT)117, UNITY_DISPLAY_STYLE_HEX32);
 
-  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArray1)), (_U_SINT)(_UP)((list->tail)), (((void *)0)), (_U_UINT)117, UNITY_DISPLAY_STYLE_HEX32);
+  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArray1)), (_U_SINT)(_UP)((list->tail)), (((void *)0)), (_U_UINT)118, UNITY_DISPLAY_STYLE_HEX32);
 
-  UnityAssertEqualNumber((_U_SINT)((1)), (_U_SINT)((elemArray0.data)), (((void *)0)), (_U_UINT)118, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((1)), (_U_SINT)((elemArray0.data)), (((void *)0)), (_U_UINT)119, UNITY_DISPLAY_STYLE_INT);
 
-  UnityAssertEqualNumber((_U_SINT)((2)), (_U_SINT)((elemArray1.data)), (((void *)0)), (_U_UINT)119, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((2)), (_U_SINT)((elemArray1.data)), (((void *)0)), (_U_UINT)120, UNITY_DISPLAY_STYLE_INT);
 
-  UnityAssertEqualNumber((_U_SINT)((4)), (_U_SINT)((elemArrayA.data)), (((void *)0)), (_U_UINT)120, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((4)), (_U_SINT)((elemArrayA.data)), (((void *)0)), (_U_UINT)121, UNITY_DISPLAY_STYLE_INT);
 
-  UnityAssertEqualNumber((_U_SINT)((7)), (_U_SINT)((elemArrayB.data)), (((void *)0)), (_U_UINT)121, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((7)), (_U_SINT)((elemArrayB.data)), (((void *)0)), (_U_UINT)122, UNITY_DISPLAY_STYLE_INT);
 
-  UnityAssertEqualNumber((_U_SINT)((4)), (_U_SINT)((list->length)), (((void *)0)), (_U_UINT)122, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((4)), (_U_SINT)((list->length)), (((void *)0)), (_U_UINT)123, UNITY_DISPLAY_STYLE_INT);
 
 
 
  List_removeLast(list);
 
-  if ((((elemArray1.next)) == ((void *)0))) {} else {UnityFail( (" Expected NULL"), (_U_UINT)(_U_UINT)(_U_UINT)125);;};
+  if ((((elemArray1.next)) == ((void *)0))) {} else {UnityFail( (" Expected NULL"), (_U_UINT)(_U_UINT)(_U_UINT)126);;};
 
-  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArrayB)), (_U_SINT)(_UP)((list->head)), (((void *)0)), (_U_UINT)126, UNITY_DISPLAY_STYLE_HEX32);
+  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArrayB)), (_U_SINT)(_UP)((list->head)), (((void *)0)), (_U_UINT)127, UNITY_DISPLAY_STYLE_HEX32);
 
-  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArray0)), (_U_SINT)(_UP)((list->tail)), (((void *)0)), (_U_UINT)127, UNITY_DISPLAY_STYLE_HEX32);
+  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArray0)), (_U_SINT)(_UP)((list->tail)), (((void *)0)), (_U_UINT)128, UNITY_DISPLAY_STYLE_HEX32);
 
-  UnityAssertEqualNumber((_U_SINT)((1)), (_U_SINT)((elemArray0.data)), (((void *)0)), (_U_UINT)128, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((1)), (_U_SINT)((elemArray0.data)), (((void *)0)), (_U_UINT)129, UNITY_DISPLAY_STYLE_INT);
 
-  UnityAssertEqualNumber((_U_SINT)((4)), (_U_SINT)((elemArrayA.data)), (((void *)0)), (_U_UINT)129, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((4)), (_U_SINT)((elemArrayA.data)), (((void *)0)), (_U_UINT)130, UNITY_DISPLAY_STYLE_INT);
 
-  UnityAssertEqualNumber((_U_SINT)((7)), (_U_SINT)((elemArrayB.data)), (((void *)0)), (_U_UINT)130, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((7)), (_U_SINT)((elemArrayB.data)), (((void *)0)), (_U_UINT)131, UNITY_DISPLAY_STYLE_INT);
 
-  UnityAssertEqualNumber((_U_SINT)((3)), (_U_SINT)((list->length)), (((void *)0)), (_U_UINT)131, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((3)), (_U_SINT)((list->length)), (((void *)0)), (_U_UINT)132, UNITY_DISPLAY_STYLE_INT);
 
 
 
   List_removeFirst(list);
 
-  if ((((elemArray1.next)) == ((void *)0))) {} else {UnityFail( (" Expected NULL"), (_U_UINT)(_U_UINT)(_U_UINT)134);;};
+  if ((((elemArray1.next)) == ((void *)0))) {} else {UnityFail( (" Expected NULL"), (_U_UINT)(_U_UINT)(_U_UINT)135);;};
 
-  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArrayA)), (_U_SINT)(_UP)((list->head)), (((void *)0)), (_U_UINT)135, UNITY_DISPLAY_STYLE_HEX32);
+  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArrayA)), (_U_SINT)(_UP)((list->head)), (((void *)0)), (_U_UINT)136, UNITY_DISPLAY_STYLE_HEX32);
 
-  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArray0)), (_U_SINT)(_UP)((list->tail)), (((void *)0)), (_U_UINT)136, UNITY_DISPLAY_STYLE_HEX32);
+  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArray0)), (_U_SINT)(_UP)((list->tail)), (((void *)0)), (_U_UINT)137, UNITY_DISPLAY_STYLE_HEX32);
 
-  UnityAssertEqualNumber((_U_SINT)((1)), (_U_SINT)((elemArray0.data)), (((void *)0)), (_U_UINT)137, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((1)), (_U_SINT)((elemArray0.data)), (((void *)0)), (_U_UINT)138, UNITY_DISPLAY_STYLE_INT);
 
-  UnityAssertEqualNumber((_U_SINT)((4)), (_U_SINT)((elemArrayA.data)), (((void *)0)), (_U_UINT)138, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((4)), (_U_SINT)((elemArrayA.data)), (((void *)0)), (_U_UINT)139, UNITY_DISPLAY_STYLE_INT);
 
-  UnityAssertEqualNumber((_U_SINT)((2)), (_U_SINT)((list->length)), (((void *)0)), (_U_UINT)139, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((2)), (_U_SINT)((list->length)), (((void *)0)), (_U_UINT)140, UNITY_DISPLAY_STYLE_INT);
 
 }

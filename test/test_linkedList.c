@@ -105,6 +105,7 @@ void test_List_addLast_should_add_last_third_element(){
   List_addFirst(list,&elemArrayA);
   TEST_ASSERT_NULL(elemArray1.next);
   TEST_ASSERT_EQUAL_PTR(&elemArrayA,list->head);
+  TEST_ASSERT_EQUAL_PTR(&elemArray0,elemArrayA.next);
   TEST_ASSERT_EQUAL_PTR(&elemArray1,list->tail);
   TEST_ASSERT_EQUAL(1,elemArray0.data);
   TEST_ASSERT_EQUAL(2,elemArray1.data);

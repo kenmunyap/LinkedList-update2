@@ -18,7 +18,7 @@ void List_addLast(linkedList *list,Element *element){
       list->head = element;
 			list->tail = element;
 		}else{
-      list->tail->next = element;
+      list->tail->next = list->tail;
       list->tail = element;
 		}
     element->next = NULL;
