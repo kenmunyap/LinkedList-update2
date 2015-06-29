@@ -80,7 +80,7 @@ void test_List_addLast_should_add_last_third_element(){
 	//Test fixture
   
   Element elemArray1 = {.next = NULL, .data = 2};
-	Element elemArray0 = {.next = &elemArray1, .data = 1};
+	Element elemArray0 = {.next = NULL, .data = 1};
   Element elemArrayA = {.next = NULL, .data = 4};
   Element elemArrayB = {.next = NULL, .data = 7};  
 	// list->head = &elemArray0;
@@ -88,14 +88,14 @@ void test_List_addLast_should_add_last_third_element(){
 	// list->length = 1;
 	
 	List_addLast(list,&elemArray0);
-  // TEST_ASSERT_NULL(list->head->next);
+  TEST_ASSERT_NULL(elemArray0.next);
 	TEST_ASSERT_EQUAL_PTR(&elemArray0,list->head);
 	TEST_ASSERT_EQUAL_PTR(&elemArray0,list->tail);
 	TEST_ASSERT_EQUAL(1,elemArray0.data);
 	TEST_ASSERT_EQUAL(1,list->length);
   
   List_addLast(list,&elemArray1);
-  // TEST_ASSERT_NULL(elemArray1.next);
+  TEST_ASSERT_NULL(elemArray1.next);
   TEST_ASSERT_EQUAL_PTR(&elemArray0,list->head);
   TEST_ASSERT_EQUAL_PTR(&elemArray1,list->tail);
   TEST_ASSERT_EQUAL(1,elemArray0.data);
@@ -103,7 +103,7 @@ void test_List_addLast_should_add_last_third_element(){
   TEST_ASSERT_EQUAL(2,list->length);
   
   List_addFirst(list,&elemArrayA);
-  // TEST_ASSERT_NULL(elemArray1.next);
+  TEST_ASSERT_NULL(elemArray1.next);
   TEST_ASSERT_EQUAL_PTR(&elemArrayA,list->head);
   TEST_ASSERT_EQUAL_PTR(&elemArray1,list->tail);
   TEST_ASSERT_EQUAL(1,elemArray0.data);
@@ -112,7 +112,7 @@ void test_List_addLast_should_add_last_third_element(){
   TEST_ASSERT_EQUAL(3,list->length);
   
   List_addFirst(list,&elemArrayB);
-  // TEST_ASSERT_NULL(elemArray0.next);
+  TEST_ASSERT_NULL(elemArray1.next);
   TEST_ASSERT_EQUAL_PTR(&elemArrayB,list->head);
   TEST_ASSERT_EQUAL_PTR(&elemArray1,list->tail);
   TEST_ASSERT_EQUAL(1,elemArray0.data);
@@ -122,7 +122,7 @@ void test_List_addLast_should_add_last_third_element(){
   TEST_ASSERT_EQUAL(4,list->length);
   
  List_removeLast(list);
-  // TEST_ASSERT_NULL(elemArray1.next);
+  TEST_ASSERT_NULL(elemArray1.next);
   TEST_ASSERT_EQUAL_PTR(&elemArrayB,list->head);
   TEST_ASSERT_EQUAL_PTR(&elemArray0,list->tail);
   TEST_ASSERT_EQUAL(1,elemArray0.data);
@@ -131,7 +131,7 @@ void test_List_addLast_should_add_last_third_element(){
   TEST_ASSERT_EQUAL(3,list->length);
   
   List_removeFirst(list);
-  // TEST_ASSERT_NULL(elemArray1.next);
+  TEST_ASSERT_NULL(elemArray1.next);
   TEST_ASSERT_EQUAL_PTR(&elemArrayA,list->head);
   TEST_ASSERT_EQUAL_PTR(&elemArray0,list->tail);
   TEST_ASSERT_EQUAL(1,elemArray0.data);

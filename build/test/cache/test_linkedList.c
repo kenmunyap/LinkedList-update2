@@ -50,7 +50,7 @@ void test_List_addLast_should_add_last_third_element(){
 
   Element elemArray1 = {.next = ((void *)0), .data = 2};
 
- Element elemArray0 = {.next = &elemArray1, .data = 1};
+ Element elemArray0 = {.next = ((void *)0), .data = 1};
 
   Element elemArrayA = {.next = ((void *)0), .data = 4};
 
@@ -66,7 +66,7 @@ void test_List_addLast_should_add_last_third_element(){
 
  List_addLast(list,&elemArray0);
 
-
+  if ((((elemArray0.next)) == ((void *)0))) {} else {UnityFail( (" Expected NULL"), (_U_UINT)(_U_UINT)(_U_UINT)91);;};
 
  UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArray0)), (_U_SINT)(_UP)((list->head)), (((void *)0)), (_U_UINT)92, UNITY_DISPLAY_STYLE_HEX32);
 
@@ -80,7 +80,7 @@ void test_List_addLast_should_add_last_third_element(){
 
   List_addLast(list,&elemArray1);
 
-
+  if ((((elemArray1.next)) == ((void *)0))) {} else {UnityFail( (" Expected NULL"), (_U_UINT)(_U_UINT)(_U_UINT)98);;};
 
   UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArray0)), (_U_SINT)(_UP)((list->head)), (((void *)0)), (_U_UINT)99, UNITY_DISPLAY_STYLE_HEX32);
 
@@ -96,7 +96,7 @@ void test_List_addLast_should_add_last_third_element(){
 
   List_addFirst(list,&elemArrayA);
 
-
+  if ((((elemArray1.next)) == ((void *)0))) {} else {UnityFail( (" Expected NULL"), (_U_UINT)(_U_UINT)(_U_UINT)106);;};
 
   UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArrayA)), (_U_SINT)(_UP)((list->head)), (((void *)0)), (_U_UINT)107, UNITY_DISPLAY_STYLE_HEX32);
 
@@ -114,7 +114,7 @@ void test_List_addLast_should_add_last_third_element(){
 
   List_addFirst(list,&elemArrayB);
 
-
+  if ((((elemArray1.next)) == ((void *)0))) {} else {UnityFail( (" Expected NULL"), (_U_UINT)(_U_UINT)(_U_UINT)115);;};
 
   UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArrayB)), (_U_SINT)(_UP)((list->head)), (((void *)0)), (_U_UINT)116, UNITY_DISPLAY_STYLE_HEX32);
 
@@ -134,7 +134,7 @@ void test_List_addLast_should_add_last_third_element(){
 
  List_removeLast(list);
 
-
+  if ((((elemArray1.next)) == ((void *)0))) {} else {UnityFail( (" Expected NULL"), (_U_UINT)(_U_UINT)(_U_UINT)125);;};
 
   UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArrayB)), (_U_SINT)(_UP)((list->head)), (((void *)0)), (_U_UINT)126, UNITY_DISPLAY_STYLE_HEX32);
 
@@ -152,7 +152,7 @@ void test_List_addLast_should_add_last_third_element(){
 
   List_removeFirst(list);
 
-
+  if ((((elemArray1.next)) == ((void *)0))) {} else {UnityFail( (" Expected NULL"), (_U_UINT)(_U_UINT)(_U_UINT)134);;};
 
   UnityAssertEqualNumber((_U_SINT)(_UP)((&elemArrayA)), (_U_SINT)(_UP)((list->head)), (((void *)0)), (_U_UINT)135, UNITY_DISPLAY_STYLE_HEX32);
 

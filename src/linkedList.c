@@ -18,10 +18,10 @@ void List_addLast(linkedList *list,Element *element){
       list->head = element;
 			list->tail = element;
 		}else{
-      element->next = list->tail;
+      list->tail->next = element;
       list->tail = element;
 		}
-    list->tail->next = NULL;
+    element->next = NULL;
 		list->length++;
 }
 
